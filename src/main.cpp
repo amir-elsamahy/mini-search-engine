@@ -34,7 +34,15 @@ vector<string> tokenization(const string& text){
     stringstream ss(text);
     string word;
     while(ss>>word){
-        tokens.push_back(word);
+       string clearword;
+       for(char c: word){
+        if(isalnum(c)){
+            clearword+= tolower(c);
+        }
+       }
+        if(!clearword.empty()){
+            tokens.push_back(clearword);
+        }
     }
     return tokens;
 }
@@ -44,10 +52,11 @@ int main(){
 // string filenam;
 // cout<<"enter : ";
 // getline(cin,filenam);
-string content = readfile("../docs/doc1.txt");
+string content = readfile("../docs/doc2.txt");
 vector<string> words=tokenization(content);
  for(const string& word : words){
     cout<<word<<endl;
+    
  }
 
 }
