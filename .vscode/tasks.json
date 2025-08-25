@@ -9,6 +9,9 @@
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/InvertedIndex.cpp",
                 "${workspaceFolder}/src/Utils.cpp",
+                "${workspaceFolder}/src/SearchEngine.cpp",
+                "${workspaceFolder}/src/Trie.cpp",
+
                 "-I${workspaceFolder}/include",
                 "-o",
                 "${workspaceFolder}/main.exe"

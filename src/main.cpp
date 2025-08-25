@@ -1,63 +1,22 @@
 #include<iostream>
-#include<string>
-#include<sstream>
-#include<fstream>
-#include<vector>
 #include"../include/Utils.h"
+#include"../include/InvertedIndex.h"
+
 using namespace std;
 
 
-// // takes file convert it to string and return it
-// string readfile(const string& filename){
-    
-//     ifstream file(filename);
-
-//     if(file.fail()){
-//         cout<<"error to open "<<filename<<endl;
-//         return "";
-//     }
-//     // stringstream buffer;
-//     // buffer<<file.rdbuf();
-//     // return buffer.str();
-//     string line , content;
-//     while(getline(file,line)){
-//         content = content+line+"\n";
-
-//     }
-//     return content;
-
-// }
-
-
-// // takes string split it on any space or , then return it in a vector
-// vector<string> tokenization(const string& text){
-//     vector<string> tokens;
-//     stringstream ss(text);
-//     string word;
-//     while(ss>>word){
-//        string clearword;
-//        for(char c: word){
-//         if(isalnum(c)){
-//             clearword+= tolower(c);
-//         }
-//        }
-//         if(!clearword.empty()){
-//             tokens.push_back(clearword);
-//         }
-//     }
-//     return tokens;
-// }
-
-
 int main(){
-// string filenam;
-// cout<<"enter : ";
-// getline(cin,filenam);
-string content = readfile("../docs/doc4.txt");
-vector<string> words=tokenization(content);
- for(const string& word : words){
-    cout<<word<<endl;
-    
- }
+InvertedIndex index;
+string content3 = readfile("../docs/doc3.txt");
+string content2 = readfile("../docs/doc2.txt");
+
+index.addDocument(3,content3);
+index.addDocument(2,content2);
+
+
+index.Gsearch("the is a test");
+
+unordered_set<int> result= index.search("the");
+
 
 }
