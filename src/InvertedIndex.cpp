@@ -6,17 +6,67 @@
 #include<unordered_set>
 #include"../include/Utils.h"
 #include"../include/InvertedIndex.h"
+#include <algorithm>
+
 
 using namespace std;
 
 
-    void InvertedIndex::addDocument(int id,const string& text){
+    void InvertedIndex::addDocumentsimple(int id,const string& text){
       vector <string> words=tokenization(text);
 
       for(const string& word: words){
         index[word].insert(id);
       }
     }
+    
+    void InvertedIndex:: addDocumentwithfreq(int id,const std::string& text){
+      vector <string> words =tokenization(text);
+      for(const string& word :words){
+        index2[word][id]++;
+        
+      }
+    }
+
+ 
+
+
+    vector<pair<int,int>>InvertedIndex:: searchwithfreq(const string& query){
+      string word=Cleanword(query);
+      
+      vector<pair<int,int>> results;
+
+      if(index2.find(word)==index2.end()){
+        return results;
+      }
+      
+
+      for(auto& [docid,freq]: index2[word]){
+        results.push_back({docid,freq});
+
+      }
+
+
+
+// tie the first number .
+     sort(results.begin(),results.end(),[](auto&a,auto&b){
+      if (a.second==b.second){
+        return a.first<b.first;
+      }
+      return a.second > b.second;  
+     });
+
+     return results;
+
+    }
+
+
+
+
+
+
+
+
 
 
 
@@ -39,7 +89,13 @@ using namespace std;
 
       }
     }
-    
+
+
+
+
+
+
+
 
 
     void InvertedIndex:: clearIndex(){

@@ -12,13 +12,17 @@
 
 class InvertedIndex{
     private:
-   std:: unordered_map<std::string,std::unordered_set<int>> index;
+        std::unordered_map<std::string,std::unordered_set<int>> index;
+
+        std:: unordered_map<std:: string,std::unordered_map<int,int>>index2;
+
     public:
 
-    void addDocument(int id,const std::string& text);
-
+    void addDocumentsimple(int id,const std::string& text);
+    void addDocumentwithfreq(int id,const std::string& text);
 
     std::unordered_set<int> search(const std::string& query);
+    std::vector<std::pair<int,int>> searchwithfreq(const std::string& query);
 
 
 

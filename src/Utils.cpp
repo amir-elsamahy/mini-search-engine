@@ -50,6 +50,17 @@ vector<string> tokenization(const string& text){
 }
 
 
+string Cleanword(const std:: string& word){
+    string cleanword;
+    for(char c: word){
+        if(isalnum(c)){
+            cleanword+= tolower(c);
+        }
+    }
+    return cleanword;
+
+}
+
 
 // refrence 
 

@@ -1,1 +1,1 @@
-Python is popular for data analysis and artificial intelligence. It has many libraries like pandas, numpy, and scikit-learn. Python is also great for beginners.
+Python is popular for data analysis and artificial intelligence. It has many libraries like pandas, numpy, and scikit-learn. Python is also great for beginners. 
