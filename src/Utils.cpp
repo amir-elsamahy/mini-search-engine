@@ -38,7 +38,7 @@ vector<string> tokenization(const string& text){
     while(ss>>word){
        string clearword;
        for(char c: word){
-        if(isalnum(c)){
+        if(isalnum(c)|| c=='+' || c=='#'){
             clearword+= tolower(c);
         }
        }
