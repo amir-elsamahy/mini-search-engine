@@ -19,6 +19,7 @@ string content5 = readfile("../docs/doc5.txt");
 
 //// testing day1/2//////
 
+
 // index.addDocumentsimple(2,content2);
 // index.addDocumentsimple(1,content1);
 // index.addDocumentsimple(3,content3);
