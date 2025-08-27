@@ -25,6 +25,7 @@ string content5 = readfile("../docs/doc5.txt");
 
 
 
+
 // index.Gsearch("amir");
 
 // unordered_set<int> result= index.search("AI");
