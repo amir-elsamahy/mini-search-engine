@@ -1,0 +1,2 @@
+Search engines use algorithms to find information. They build indexes of documents and rank results based on relevance. Google is the most famous search engine.
+

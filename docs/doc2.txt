@@ -1,0 +1,1 @@
+Artificial intelligence is a branch of computer science. It focuses on creating systems that can learn and make decisions. Machine learning is a subset of AI.
