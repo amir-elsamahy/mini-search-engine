@@ -13,7 +13,6 @@
 class InvertedIndex{
     private:
         std::unordered_map<std::string,std::unordered_set<int>> index;
-
         std:: unordered_map<std:: string,std::unordered_map<int,int>>index2;
 
     public:
@@ -34,7 +33,7 @@ class InvertedIndex{
 ////// search output/////////
     void printSearch(const std::unordered_set<int>& results);
     void printGsearchwithfreq(std::vector<std::pair<int,int>> & results);
-    
+
 
 //////// clear& print index1///
 

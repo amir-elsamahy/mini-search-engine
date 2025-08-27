@@ -11,7 +11,7 @@
 
 using namespace std;
 
-                                                                    //////// prepare ////////
+                                                                //////// prepare ////////
 
 
   void InvertedIndex::addDocumentsimple(int id,const string& text){
