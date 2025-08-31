@@ -1,6 +1,8 @@
 #include<iostream>
 #include"../include/Utils.h"
 #include"../include/InvertedIndex.h"
+#include"../include/Trie.h" 
+#include "SearchEngine.h"
 
 using namespace std;
 
@@ -37,32 +39,25 @@ string content5 = readfile("../docs/doc5.txt");
 /////// testing day3/4///////
 
 
-index.addDocumentwithfreq(1,content1);
-index.addDocumentwithfreq(2,content2);
-index.addDocumentwithfreq(3,content3);
-index.addDocumentwithfreq(4,content4);
-index.addDocumentwithfreq(5,content5);
+// index.addDocumentwithfreq(1,content1);
+// index.addDocumentwithfreq(2,content2);
+// index.addDocumentwithfreq(3,content3);
+// index.addDocumentwithfreq(4,content4);
+// index.addDocumentwithfreq(5,content5);
 
-auto search=index.Gsearchwithfreq("c++ ai");
-auto search2=index.searchwithfreq("data");
-
-
-
-index.printGsearchwithfreq(search);
-index.printGsearchwithfreq(search2);
+// auto search=index.Gsearchwithfreq("c++ ai");
+// auto search2=index.searchwithfreq("data");
 
 
+
+// index.printGsearchwithfreq(search);
+// index.printGsearchwithfreq(search2);
 
 
 
 
 
-
-
-
-
-
-
+//////////////// test day 4///////////////
 
 
 
